@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Homemade Pickles & Snacks</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(120deg, #E6F2FF 60%, #B0E0E6 100%); }
+    header { background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%); color: white; padding: 2rem 1rem 1rem 1rem; text-align: center; box-shadow: 0 2px 10px #b0e0e6; }
+    nav { background-color: #B0E0E6; padding: 0.7rem; text-align: center; border-bottom: 2px solid #2E8B57; }
+    nav a { margin: 0 18px; text-decoration: none; color: #2E8B57; font-weight: bold; font-size: 1.1rem; transition: color 0.2s; }
+    nav a:hover { color: #4682B4; text-shadow: 0 1px 4px #b0e0e6; }
+    section, main { padding: 2rem 1rem; }
+    .product-preview, .pickle-grid, .snack-grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; }
+    .product-box, .pickle-item, .snack-item { background: linear-gradient(120deg, #ffffff 80%, #E6F2FF 100%); border-radius: 16px; padding: 1.5rem 1rem; margin: 1rem 0; width: 260px; box-shadow: 0 4px 16px #b0e0e6; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+    .product-box:hover, .pickle-item:hover, .snack-item:hover { transform: translateY(-8px) scale(1.04); box-shadow: 0 8px 24px #4682b4aa; }
+    .product-box h3, .pickle-item h3, .snack-item h3 { color: #2E8B57; margin-bottom: 0.5rem; }
+    .product-box p, .pickle-item p, .snack-item p { color: #315a7d; }
+    .hero {
+      background: linear-gradient(120deg, #4682B4 60%, #2E8B57 100%);
+      color: white;
+      padding: 5rem 2rem 3rem 2rem;
+      text-align: center;
+      position: relative;
+      border-radius: 18px;
+      margin: 2rem 0 2rem 0;
+      box-shadow: 0 6px 32px #b0e0e6;
+      overflow: hidden;
+    }
+    .hero img {
+      width: 220px;
+      border-radius: 16px;
+      margin: 1.5rem 0 1rem 0;
+      box-shadow: 0 4px 16px #2e8b5740;
+      border: 4px solid #B0E0E6;
+      background: #fff;
+    }
+    .hero-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.9rem 2.2rem;
+      background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 8px #4682b4aa;
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .hero-btn:hover {
+      background: linear-gradient(90deg, #4682B4 80%, #2E8B57 100%);
+      transform: scale(1.05);
+    }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; background: #fff; border-radius: 10px; overflow: hidden; }
+    th, td { border: 1px solid #b0e0e6; padding: 0.75rem; text-align: center; }
+    th { background-color: #B0E0E6; color: #2E8B57; }
+    .total { font-weight: bold; font-size: 1.1rem; text-align: right; margin-top: 1rem; }
+    .checkout-button, .home-button, button, input[type="submit"] {
+      background: linear-gradient(90deg, #4682B4 80%, #2E8B57 100%);
+      color: white;
+      padding: 0.7rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1.2rem;
+      box-shadow: 0 2px 8px #4682b4aa;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .checkout-button:hover, .home-button:hover, button:hover, input[type="submit"]:hover {
+      background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%);
+      transform: scale(1.05);
+    }
+    .order-container, .signup-box, .login-box, .success-container {
+      background: linear-gradient(120deg, #ffffff 80%, #E6F2FF 100%);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px #b0e0e6;
+      padding: 2rem;
+      margin: 3rem auto;
+      max-width: 600px;
+      text-align: center;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #b0e0e6;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    label { display: block; margin-top: 1rem; color: #315a7d; font-weight: bold; }
+    h2 { color: #2E8B57; text-align: center; }
+    footer { background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%); color: white; text-align: center; padding: 1.2rem; margin-top: 2rem; border-radius: 12px 12px 0 0; box-shadow: 0 -2px 10px #b0e0e6; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Homemade Pickles & Snacks</h1>
+  </header>
+
+  <nav>
+    <a href="/home">Home</a>
+    <a href="/veg_pickles">Veg Pickles</a>
+    <a href="/non_veg_pickles">Non-Veg Pickles</a>
+    <a href="/snackes">Snacks</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
+    <a href="/order">order</a>
+  </nav>
+
+  <section>
+    <h2>Our Story</h2>
+    <p>
+      Born in the heart of a small kitchen, Homemade Pickles & Snacks was crafted out of love for authentic flavors passed down through generations. What began as weekend experiments with age-old recipes soon blossomed into a passion for preserving homemade taste in every jar and packet.
+    </p>
+    <p>
+      Every pickle we ferment and every snack we fry is made using carefully sourced ingredients and traditional techniques, ensuring freshness, hygiene, and a bold burst of nostalgia in every bite. From spicy mango pickles to crunchy murukulu, we bring you the essence of grandma’s kitchen—packaged with care.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Homemade Pickles & Snacks. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

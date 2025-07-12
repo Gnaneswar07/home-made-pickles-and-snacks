@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Homemade Pickles & Snacks</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(120deg, #E6F2FF 60%, #B0E0E6 100%); }
+    header { background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%); color: white; padding: 2rem 1rem 1rem 1rem; text-align: center; box-shadow: 0 2px 10px #b0e0e6; }
+    nav { background-color: #B0E0E6; padding: 0.7rem; text-align: center; border-bottom: 2px solid #2E8B57; }
+    nav a { margin: 0 18px; text-decoration: none; color: #2E8B57; font-weight: bold; font-size: 1.1rem; transition: color 0.2s; }
+    nav a:hover { color: #4682B4; text-shadow: 0 1px 4px #b0e0e6; }
+    section { padding: 2rem 1rem; }
+    .product-preview { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; }
+    .product-box { background: linear-gradient(120deg, #ffffff 80%, #E6F2FF 100%); border-radius: 16px; padding: 1.5rem 1rem; margin: 1rem 0; width: 260px; box-shadow: 0 4px 16px #b0e0e6; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+    .product-box:hover { transform: translateY(-8px) scale(1.04); box-shadow: 0 8px 24px #4682b4aa; }
+    .product-box h3 { color: #2E8B57; margin-bottom: 0.5rem; }
+    .product-box p { color: #315a7d; }
+    .hero {
+      background: linear-gradient(120deg, #4682B4 60%, #2E8B57 100%);
+      color: white;
+      padding: 5rem 2rem 3rem 2rem;
+      text-align: center;
+      position: relative;
+      border-radius: 18px;
+      margin: 2rem 0 2rem 0;
+      box-shadow: 0 6px 32px #b0e0e6;
+      overflow: hidden;
+    }
+    .hero img {
+      width: 220px;
+      border-radius: 16px;
+      margin: 1.5rem 0 1rem 0;
+      box-shadow: 0 4px 16px #2e8b5740;
+      border: 4px solid #B0E0E6;
+      background: #fff;
+    }
+    .hero-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.9rem 2.2rem;
+      background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 8px #4682b4aa;
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .hero-btn:hover {
+      background: linear-gradient(90deg, #4682B4 80%, #2E8B57 100%);
+      transform: scale(1.05);
+    }
+    footer { background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%); color: white; text-align: center; padding: 1.2rem; margin-top: 2rem; border-radius: 12px 12px 0 0; box-shadow: 0 -2px 10px #b0e0e6; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Homemade Pickles & Snacks</h1>
+    <p>Authentic tastes from our kitchen to yours!</p>
+  </header>
+
+  <nav>
+    <a href="/about">About</a>
+    <a href="/veg_pickles">Veg Pickles</a>
+    <a href="/non_veg_pickles">Non-Veg Pickles</a>
+    <a href="/snackes">Snacks</a>
+    <a href="/contact">Contact</a>
+    <a href="/cart">Cart</a>
+    <a href="/order">Order</a>
+    <a href="/logout">Logout</a>
+  </nav>
+
+  <section>
+    <h2>Featured Products</h2>
+    <div class="product-preview">
+      <div class="product-box">
+        <h3>Mango Pickle</h3>
+        <p>Spicy and tangy mango chunks packed with tradition.</p>
+      </div>
+      <div class="product-box">
+        <h3>Chicken Pickle</h3>
+        <p>Rich, flavorful and fiery—perfect with rice or roti.</p>
+      </div>
+      <div class="product-box">
+        <h3>Masala Murukulu</h3>
+        <p>Crunchy South Indian snack seasoned to perfection.</p>
+      </div>
+    </div>
+  </section>
+  <section class="hero">
+  <div class="hero-text">
+    <h2>Freshly  Home Made, Traditionally Loved</h2>
+    <img src="{{ url_for('static', filename='images/download (3) - Copy.jpg') }}" alt="Pickles" />
+    <p>Get up to 20% off on your first order!</p>
+    <a href="/order" class="hero-btn">Shop Now</a>
+  </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Homemade Pickles & Snacks. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

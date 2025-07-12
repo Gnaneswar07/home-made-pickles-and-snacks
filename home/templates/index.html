@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Homemade Pickles & Snacks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #E6F2FF, #B0E0E6);
+      margin: 0;
+      padding: 0;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: 6rem auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 3px 3px 12px #b0e0e6;
+    }
+    h1 {
+      text-align: center;
+      color: #2E8B57;
+      margin-bottom: 2rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #315a7d;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid #b0e0e6;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .login-button {
+      background-color: #4682B4;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      width: 100%;
+      border-radius: 5px;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login-button:hover {
+      background-color: #315a7d;
+    }
+    .signup-link {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .signup-link a {
+      color: #2E8B57;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>Welcome to My Shop</h1>
+    <form action="/login" method="post">
+      <label for="username">Username or Email</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit" class="login-button">Login</button>
+    </form>
+    <div class="signup-link">
+      Don't have an account? <a href="/signup">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+</html>

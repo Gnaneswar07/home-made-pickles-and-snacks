@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snacks - Homemade Pickles & Snacks</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #E6F2FF; margin: 0; padding: 0; }
+    header, footer { background-color: #2E8B57; color: white; text-align: center; padding: 1rem; }
+    nav { background-color: #B0E0E6; padding: 0.5rem; text-align: center; }
+    nav a { margin: 0 15px; text-decoration: none; color: #2E8B57; font-weight: bold; }
+    main { max-width: 1000px; margin: 2rem auto; background-color: #ffffff; padding: 2rem; border-radius: 10px; box-shadow: 2px 2px 10px #b0e0e6; }
+    h2 { color: #2E8B57; text-align: center; }
+    .snack-grid {
+      display: flex; flex-wrap: wrap; justify-content: space-around;
+      margin-top: 2rem;
+    }
+    .snack-item {
+      background-color: #E6F2FF; width: 250px; margin: 1rem; padding: 1rem;
+      border-radius: 8px; text-align: center; box-shadow: 1px 1px 6px #b0e0e6;
+    }
+    .snack-item h3 { color: #2E8B57; }
+    .snack-item p { color: #315a7d; }
+    .snack-item .price { color: #4682B4; font-weight: bold; margin-top: 0.5rem; }
+    .add-to-cart {
+      background: linear-gradient(90deg, #4682B4 80%, #2E8B57 100%);
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(70, 130, 180, 0.3);
+    }
+    .add-to-cart:hover {
+      background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(46, 139, 87, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Homemade Pickles & Snacks</h1>
+    <p>South Indian Crunch & Munch Specials</p>
+  </header>
+
+  <nav>
+    <a href="/home">Home</a>
+    <a href="/veg_pickles">Veg Pickles</a>
+    <a href="/non_veg_pickles">Non-Veg Pickles</a>
+    <a href="/about">About</a>
+    <a href="/cart">Cart</a>
+    <a href="/contact">Contact</a>
+    <a href="/order">Order</a>
+    <a href="/logout">Logout</a>
+  </nav>
+
+  <main>
+    <h2>Our Handmade Snacks</h2>
+    <div class="snack-grid">
+      <div class="snack-item">
+        <img src="{{ url_for('static', filename='images/murukulu.jpg') }}" alt="masala murukulu">
+        <h3>Masala Murukulu</h3>
+        <p>Crunchy rice flour spirals seasoned with traditional spices.</p>
+        <div class="price">₹80</div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="snack-item">
+        <img src="{{ url_for('static', filename='images/boondi.jpg') }}" alt="boondi">
+        <h3>Karam Boondi</h3>
+        <p>Spicy gram flour pearls with curry leaves and masala.</p>
+        <div class="price">₹70</div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="snack-item">
+        <img src="{{ url_for('static', filename='images/mixture.jpg') }}" alt="mixture">
+        <h3>Mixture</h3>
+        <p>Crispy blend of sev, peanuts, and curry leaves with spices.</p>
+        <div class="price">₹90</div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="snack-item">
+        <img src="{{ url_for('static', filename='images/chekkalu.jpg') }}" alt="Chekkalu">
+        <h3>Chekkalu</h3>
+        <p>Thin rice crackers with cumin and ginger flavors.</p>
+        <div class="price">₹60</div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="snack-item">
+        <img src="{{ url_for('static', filename='images/kakinada kaja.jpg') }}" alt="Kakinada kaja">
+        <h3>Kakinada Kaja</h3>
+        <p>Traditional sweet with flaky layers and rich taste.</p>
+        <div class="price">₹60</div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+  <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+  <footer>
+    <p>&copy; 2025 Homemade Pickles & Snacks. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

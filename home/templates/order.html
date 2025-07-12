@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order - Homemade Pickles & Snacks</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(120deg, #E6F2FF 60%, #B0E0E6 100%); }
+    header { background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%); color: white; padding: 2rem 1rem 1rem 1rem; text-align: center; box-shadow: 0 2px 10px #b0e0e6; }
+    nav { background-color: #B0E0E6; padding: 0.7rem; text-align: center; border-bottom: 2px solid #2E8B57; }
+    nav a { margin: 0 18px; text-decoration: none; color: #2E8B57; font-weight: bold; font-size: 1.1rem; transition: color 0.2s; }
+    nav a:hover { color: #4682B4; text-shadow: 0 1px 4px #b0e0e6; }
+    .order-container { background: linear-gradient(120deg, #ffffff 80%, #E6F2FF 100%); border-radius: 16px; box-shadow: 0 4px 16px #b0e0e6; padding: 2rem; margin: 3rem auto; max-width: 800px; text-align: center; }
+    h2 { color: #2E8B57; }
+    .category-links { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; }
+    .category-link { background: linear-gradient(90deg, #4682B4 80%, #2E8B57 100%); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: transform 0.2s; }
+    .category-link:hover { transform: scale(1.05); }
+    footer { background: linear-gradient(90deg, #2E8B57 80%, #4682B4 100%); color: white; text-align: center; padding: 1.2rem; margin-top: 2rem; border-radius: 12px 12px 0 0; box-shadow: 0 -2px 10px #b0e0e6; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Homemade Pickles & Snacks</h1>
+    <p>Place Your Order</p>
+  </header>
+
+  <nav>
+    <a href="/home">Home</a>
+    <a href="/veg_pickles">Veg Pickles</a>
+    <a href="/non_veg_pickles">Non-Veg Pickles</a>
+    <a href="/snackes">Snacks</a>
+    <a href="/contact">Contact</a>
+    <a href="/cart">Cart</a>
+    <a href="/logout">Logout</a>
+  </nav>
+
+  <div class="order-container">
+    <h2>Choose Your Category</h2>
+    <p>Select from our delicious range of homemade pickles and snacks</p>
+    
+    <div class="category-links">
+      <a href="/veg_pickles" class="category-link">Vegetarian Pickles</a>
+      <a href="/non_veg_pickles" class="category-link">Non-Veg Pickles</a>
+      <a href="/snackes" class="category-link">Snacks</a>
+    </div>
+    
+    <p>Or check your <a href="/cart" style="color: #2E8B57; font-weight: bold;">Cart</a> to proceed with checkout.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Homemade Pickles & Snacks. All rights reserved.</p>
+  </footer>
+</body>
+</html>

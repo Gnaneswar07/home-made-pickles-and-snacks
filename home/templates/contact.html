@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Homemade Pickles & Snacks</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #E6F2FF; margin: 0; padding: 0; }
+    header, footer { background-color: #2E8B57; color: white; text-align: center; padding: 1rem; }
+    nav { background-color: #B0E0E6; padding: 0.5rem; text-align: center; }
+    nav a { margin: 0 15px; text-decoration: none; color: #2E8B57; font-weight: bold; }
+    main { max-width: 700px; margin: 2rem auto; background-color: #ffffff; padding: 2rem; border-radius: 10px; box-shadow: 2px 2px 10px #b0e0e6; }
+    h2 { color: #2E8B57; text-align: center; }
+    form label { display: block; margin-top: 1rem; color: #315a7d; }
+    input, textarea {
+      width: 100%; padding: 0.5rem; margin-top: 0.3rem;
+      border: 1px solid #b0e0e6; border-radius: 5px; box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4682B4; color: white; padding: 0.75rem;
+      border: none; font-size: 1rem; border-radius: 5px; cursor: pointer;
+      margin-top: 1.5rem;
+      transition: background 0.2s;
+    }
+    input[type="submit"]:hover { background-color: #315a7d; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Homemade Pickles & Snacks</h1>
+    <p>We'd love to hear from you!</p>
+  </header>
+
+  <nav>
+    <a href="/home">Home</a>
+    <a href="/about">About</a>
+    <a href="/veg_pickles">Veg Pickles</a>
+    <a href="/non_veg_pickles">Non-Veg Pickles</a>
+    <a href="/snackes">Snacks</a>
+    <a href="/cart">Cart</a>
+    <a href="/order">Order</a>
+    <a href="/logout">Logout</a>
+  </nav>
+
+  <main>
+    <h2>Contact Us</h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div style="padding: 1rem; margin: 1rem 0; border-radius: 5px; {% if category == 'success' %}background: #d4edda; color: #155724; border: 1px solid #c3e6cb;{% else %}background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;{% endif %}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <form action="/contact" method="post">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Homemade Pickles & Snacks. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
